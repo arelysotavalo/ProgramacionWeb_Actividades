@@ -1,23 +1,20 @@
-
-/*Estilos generales*/ 
-* {                      /* al escribir con un "*" significa q es selctor universal, es decir lo q esta dentro se aplicara a todo el HTML*/
-    margin: 0;      /*elimina los margenes externos, es decir espacio por fuera del elemento */
-    padding: 0;     /*elimina los margenes internos, es decir espacio por dentro del elemento */
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;    
 }
 
 html {
-    scroll-behavior: smooth;   /*hace q el desplazamiento de la pagina sea suave */
+    scroll-behavior: smooth;   
 }
 
 body {
-    font-family: Arial, sans-serif;    /*establece el tipo de letra en la pagina, "Arial" tipo de fuente yb "sans-serif" es fuente alternativa si Arial no esta disponible*/
-    background-color: #f4f8fc;     /*color de fondo */
-    color: #25344d;      /* color del texto */
-    line-height: 1.6;        /* es el espacio q hay entre lineas */
+    font-family: Arial, sans-serif;    
+    background-color: #f4f8fc;     
+    color: #25344d;      
+    line-height: 1.6;        
 }
 
-/* Encabezado */
 header {
     background: linear-gradient(135deg, #10253e, #204a72);
     color: white;
@@ -30,75 +27,275 @@ header h1 {
     margin-bottom: 10px;
 }
 
-header p {                /* es un sector descendiente q se aplicara a los elementos "p" dentro de un "header" */
+header p {                
     font-size: 20px;       
     color: #dce8f7;
 }
 
-/* Foto de perfil */
 header figure {
     margin-top: 25px;
 }
 
 header img {
-    width: 180px;   /*ancho de la imagen */
-    height: 180px;  /*largo de la imagen */
-    object-fit: cover;     /*perrmite q ocupe completamente el espacio definido sin deformarse, es decir q CSS recorta la imagen para q encaje bien*/
-    border-radius: 50%;    /* redondea las esquinas de la imagen */
-    border: 5px solid white;   /*agrega un borde blanco alrededor de la imagen, "5px" grosor del borde, "solid" linea continua y por ultimo el color*/
+    width: 180px;   
+    height: 180px;  
+    object-fit: cover;     
+    border-radius: 50%;    
+    border: 5px solid white;   
 }
 
-
-/* Coontenedor general */
 .contenedor {                  
-    display: flex;              /* permite organizar los elementos horizontalmente o verticalmente */
-    max-width: 1200px;          /* establece el ancho maximo del contenedor en 1200px, aunq puede reducirse en pantallas pequeñas */
-    margin: 35px auto;          /* "35px" margen superior e inferior y "auto" calcula los margenes izquierdo y derecho para centrar el contenedor */
-    padding: 0 20px;            /* "0" sin espacio interno superior e inferior y "20px" espacio interno izquierdo y derecho */
-    gap: 25px;                  /* agrega una separacion de 25px entre el contenido principal y la barra lateral */
-    align-items: flex-start;    /* alinea los elementos del contenedor desde la parte superior */
+    display: flex;              
+    max-width: 1200px;          
+    margin: 35px auto;          
+    padding: 0 20px;            
+    gap: 25px;                  
+    align-items: flex-start;    
 }
 
-
-/* Contenido principal */
 main {
-    flex: 3;                    /* hace q el contenido principal ocupe una proporcion mayor del espacio disponible en relacion con la barra lateral */
-    min-width: 0;               /* permite q el contenido principal reduzca su ancho cuando sea necesario, evitando q se desborde */
+    flex: 3;                    
+    min-width: 0;               
 }
 
-
-/* Barra lateral */
 .barra-lateral {                
-    flex: 1;                    /* hace q la barra lateral ocupe una proporcion menor del espacio disponible en comparacion con el contenido principal */
-    min-width: 250px;           /* da un ancho minimo de 250px para evitar q la barra lateral se vuelva demasiado estrecha */
+    flex: 1;                    
+    min-width: 250px;           
 }
-/* Secciones */
+
 section {
-    background-color: white; /* es un fondo den cada seccion de color blanco */
-    padding: 30px;    /*agrega un espacio interno de 30 px en los cuatro lados de la seccion */
-    margin-bottom: 25px;   /* agrega un espacio externo de 25 px debajo de cada seccion en este caso sirve para separar visualmente las tarjetas */
-    border-radius: 12px;   /* redonde las esquinas de cada seccion con un radio de 12 px */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);  /* agrega una sombra alrededor de cada seccion, crea un efecto de tarjeta elevada */
-                                                    /* "0" desplzamiento horizontal de la sombra, "4px" desplazamiento vertical-hacia abajo, 
-                                                    "15px" nivel de difuminado de sombra y rgba(%rojo, %verde, %azul, alfa-controla la transparencia) */
+    background-color: white; 
+    padding: 30px;    
+    margin-bottom: 25px;   
+    border-radius: 12px;   
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);  
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
+
+section:hover {
+    transform: translateY(-4px);
+}
+
 
 section h2 {
     color: #123568;
     font-size: 26px;
-    margin-bottom: 18px;     /*hace q haya un espacio exterior entre el h2 y wl parrafo, es decir q hace q se separe el parrafo de la linea azul */
-    border-bottom: 3px solid #1685ee;     /*hace una linea azul debajo del titulo */
-    padding-bottom: 10px;   /* hace q haya un espacio interno entre el titulo y el borde inferiror o la linea azul */
+    margin-bottom: 18px;     
+    border-bottom: none;     
+    padding-bottom: 0;   
 }
 
 section p {
     font-size: 16px;
-    text-align: justify;    /*ajusta el espacio entre palabras para q queden alineadas */ 
+    text-align: justify;    
 }
 
-/* Sitios relacionados */
+.destacados-grid {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.tarjeta-destacada {
+    flex: 1;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-destacada:hover {
+    transform: translateY(-5px);
+    background-color: #edf5ff;
+    box-shadow: 0 6px 15px rgba(18, 53, 104, 0.1);
+}
+
+.icono-destacado {
+    font-size: 24px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.tarjeta-destacada h3 {
+    font-size: 15px;
+    color: #123568;
+    margin-bottom: 6px;
+}
+
+.tarjeta-destacada p {
+    font-size: 13px;
+    color: #516485;
+    text-align: center;
+}
+
+.timeline-item {
+    background-color: #fafbfd;
+    border-left: 4px solid #1685ee;
+    padding: 18px 20px;
+    border-radius: 0 10px 10px 0;
+    transition: background-color 0.3s ease;
+}
+
+.timeline-item:hover {
+    background-color: #f0f7ff;
+}
+
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.timeline-header h3 {
+    color: #123568;
+    font-size: 19px;
+}
+
+.badge-institucion {
+    background-color: #e6f0fa;
+    color: #1265bd;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 4px 10px;
+    border-radius: 15px;
+}
+
+.tags-formacion {
+    display: flex;
+    gap: 8px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.tag-estudio {
+    background-color: #ffffff;
+    border: 1px solid #dce8f7;
+    color: #25344d;
+    font-size: 12px;
+    padding: 3px 10px;
+    border-radius: 6px;
+}
+
+.grupo-habilidades {
+    margin-bottom: 20px;
+}
+
+.grupo-habilidades:last-child {
+    margin-bottom: 0;
+}
+
+.grupo-habilidades h3 {
+    font-size: 18px;
+    color: #123568;
+    margin-bottom: 12px;
+}
+
+.chips-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.chip {
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    cursor: default;
+}
+
+.chip:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(18, 53, 104, 0.12);
+}
+
+.chip-tecnica {
+    background-color: #eaf3ff;
+    color: #123568;
+    border: 1px solid transparent;
+}
+
+.chip-tecnica:hover {
+    background-color: #d8e8ff;
+    border-color: #b3d4ff;
+}
+
+.chip-personal {
+    background-color: #ffffff;
+    color: #123568;
+    border: 1.5px solid #1685ee;
+}
+
+.chip-personal:hover {
+    background-color: #f0f7ff;
+    border-color: #0c64b8;
+}
+
+details.tarjeta-desplegable {
+    margin-top: 15px;
+    border: 1px solid #dce8f7;
+    border-radius: 8px;
+    background-color: #fafbfd;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+details.tarjeta-desplegable:hover {
+    background-color: #f0f4f9;
+}
+
+details.tarjeta-desplegable summary {
+    padding: 14px 18px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #123568;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+details.tarjeta-desplegable summary::-webkit-details-marker {
+    display: none;
+}
+
+details.tarjeta-desplegable summary::after {
+    content: "+";
+    font-size: 20px;
+    font-weight: bold;
+    color: #1685ee;
+    transition: transform 0.3s ease;
+}
+
+details.tarjeta-desplegable[open] summary::after {
+    content: "✕";
+    transform: rotate(90deg);
+}
+
+details.tarjeta-desplegable summary:hover {
+    background-color: #e6f0fa;
+    color: #0d274f;
+}
+
+details.tarjeta-desplegable p {
+    padding: 15px 18px;
+    background-color: white;
+    border-top: 1px solid #eef2f7;
+    margin: 0;
+}
+
+/* Barra Lateral (Aside) */
 aside {
-    background-color: white;    /* le da el color de fondo de los sitios relacionados en blanco */
+    background-color: white;    
     padding: 20px;           
     margin: 20px 0 0;        
     border-radius: 12px;      
@@ -107,20 +304,22 @@ aside {
 
 aside h2 {                     
     color: #123568;             
-    font-size: 20px;            /* el tamaño de la letra es de 20px */
-    margin-bottom: 20px;        /* agrega un espacio exterior de 20px debajo del titulo para separarlo de los enlaces */
+    font-size: 20px;            
+    margin-bottom: 20px;        
 }
 
 aside a {                      
-    display: block;             /* hace q cada enlace se comporte como un bloque, es decir q aparezca en una linea independiente */
-    color: #1265bd;             /* establece el color del texto de los enlaces en azul */
-    text-decoration: none;      /* elimina el subrayado q tienen los enlaces por defecto */
-    padding: 12px;              /* agrega un espacio interno de 12px en los cuatro lados de cada enlace */
-    margin-bottom: 10px;        /* agrega un espacio exterior de 10px debajo de cada enlace para separarlos */
-    border: 1px solid #dce8f7;  /* agrega un borde alrededor de cada enlace, "1px" grosor, "solid" linea continua y le da color azul claro */
-    border-radius: 8px;         /* redondea las esquinas de los enlaces con un radio de 8px */
+    display: block;             
+    color: #1265bd;             
+    text-decoration: none;      
+    padding: 12px;              
+    margin-bottom: 10px;        
+    border: 1px solid #dce8f7;  
+    border-radius: 8px;         
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 aside a:hover {             
-    background-color: #e6f2ff;  /* cambia el fondo del enlace a azul claro cuando se pasa el cursor por encima */
+    background-color: #e6f2ff;  
+    transform: translateX(3px);
 }
