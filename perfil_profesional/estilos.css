@@ -1,0 +1,126 @@
+
+/*Estilos generales*/ 
+* {                      /* al escribir con un "*" significa q es selctor universal, es decir lo q esta dentro se aplicara a todo el HTML*/
+    margin: 0;      /*elimina los margenes externos, es decir espacio por fuera del elemento */
+    padding: 0;     /*elimina los margenes internos, es decir espacio por dentro del elemento */
+    box-sizing: border-box;    
+}
+
+html {
+    scroll-behavior: smooth;   /*hace q el desplazamiento de la pagina sea suave */
+}
+
+body {
+    font-family: Arial, sans-serif;    /*establece el tipo de letra en la pagina, "Arial" tipo de fuente yb "sans-serif" es fuente alternativa si Arial no esta disponible*/
+    background-color: #f4f8fc;     /*color de fondo */
+    color: #25344d;      /* color del texto */
+    line-height: 1.6;        /* es el espacio q hay entre lineas */
+}
+
+/* Encabezado */
+header {
+    background: linear-gradient(135deg, #10253e, #204a72);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+header p {                /* es un sector descendiente q se aplicara a los elementos "p" dentro de un "header" */
+    font-size: 20px;       
+    color: #dce8f7;
+}
+
+/* Foto de perfil */
+header figure {
+    margin-top: 25px;
+}
+
+header img {
+    width: 180px;   /*ancho de la imagen */
+    height: 180px;  /*largo de la imagen */
+    object-fit: cover;     /*perrmite q ocupe completamente el espacio definido sin deformarse, es decir q CSS recorta la imagen para q encaje bien*/
+    border-radius: 50%;    /* redondea las esquinas de la imagen */
+    border: 5px solid white;   /*agrega un borde blanco alrededor de la imagen, "5px" grosor del borde, "solid" linea continua y por ultimo el color*/
+}
+
+
+/* Coontenedor general */
+.contenedor {                  
+    display: flex;              /* permite organizar los elementos horizontalmente o verticalmente */
+    max-width: 1200px;          /* establece el ancho maximo del contenedor en 1200px, aunq puede reducirse en pantallas pequeñas */
+    margin: 35px auto;          /* "35px" margen superior e inferior y "auto" calcula los margenes izquierdo y derecho para centrar el contenedor */
+    padding: 0 20px;            /* "0" sin espacio interno superior e inferior y "20px" espacio interno izquierdo y derecho */
+    gap: 25px;                  /* agrega una separacion de 25px entre el contenido principal y la barra lateral */
+    align-items: flex-start;    /* alinea los elementos del contenedor desde la parte superior */
+}
+
+
+/* Contenido principal */
+main {
+    flex: 3;                    /* hace q el contenido principal ocupe una proporcion mayor del espacio disponible en relacion con la barra lateral */
+    min-width: 0;               /* permite q el contenido principal reduzca su ancho cuando sea necesario, evitando q se desborde */
+}
+
+
+/* Barra lateral */
+.barra-lateral {                
+    flex: 1;                    /* hace q la barra lateral ocupe una proporcion menor del espacio disponible en comparacion con el contenido principal */
+    min-width: 250px;           /* da un ancho minimo de 250px para evitar q la barra lateral se vuelva demasiado estrecha */
+}
+/* Secciones */
+section {
+    background-color: white; /* es un fondo den cada seccion de color blanco */
+    padding: 30px;    /*agrega un espacio interno de 30 px en los cuatro lados de la seccion */
+    margin-bottom: 25px;   /* agrega un espacio externo de 25 px debajo de cada seccion en este caso sirve para separar visualmente las tarjetas */
+    border-radius: 12px;   /* redonde las esquinas de cada seccion con un radio de 12 px */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);  /* agrega una sombra alrededor de cada seccion, crea un efecto de tarjeta elevada */
+                                                    /* "0" desplzamiento horizontal de la sombra, "4px" desplazamiento vertical-hacia abajo, 
+                                                    "15px" nivel de difuminado de sombra y rgba(%rojo, %verde, %azul, alfa-controla la transparencia) */
+}
+
+section h2 {
+    color: #123568;
+    font-size: 26px;
+    margin-bottom: 18px;     /*hace q haya un espacio exterior entre el h2 y wl parrafo, es decir q hace q se separe el parrafo de la linea azul */
+    border-bottom: 3px solid #1685ee;     /*hace una linea azul debajo del titulo */
+    padding-bottom: 10px;   /* hace q haya un espacio interno entre el titulo y el borde inferiror o la linea azul */
+}
+
+section p {
+    font-size: 16px;
+    text-align: justify;    /*ajusta el espacio entre palabras para q queden alineadas */ 
+}
+
+/* Sitios relacionados */
+aside {
+    background-color: white;    /* le da el color de fondo de los sitios relacionados en blanco */
+    padding: 20px;           
+    margin: 20px 0 0;        
+    border-radius: 12px;      
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);  
+}
+
+aside h2 {                     
+    color: #123568;             
+    font-size: 20px;            /* el tamaño de la letra es de 20px */
+    margin-bottom: 20px;        /* agrega un espacio exterior de 20px debajo del titulo para separarlo de los enlaces */
+}
+
+aside a {                      
+    display: block;             /* hace q cada enlace se comporte como un bloque, es decir q aparezca en una linea independiente */
+    color: #1265bd;             /* establece el color del texto de los enlaces en azul */
+    text-decoration: none;      /* elimina el subrayado q tienen los enlaces por defecto */
+    padding: 12px;              /* agrega un espacio interno de 12px en los cuatro lados de cada enlace */
+    margin-bottom: 10px;        /* agrega un espacio exterior de 10px debajo de cada enlace para separarlos */
+    border: 1px solid #dce8f7;  /* agrega un borde alrededor de cada enlace, "1px" grosor, "solid" linea continua y le da color azul claro */
+    border-radius: 8px;         /* redondea las esquinas de los enlaces con un radio de 8px */
+}
+
+aside a:hover {             
+    background-color: #e6f2ff;  /* cambia el fondo del enlace a azul claro cuando se pasa el cursor por encima */
+}
