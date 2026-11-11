@@ -323,3 +323,55 @@ aside a:hover {
     background-color: #e6f2ff;  
     transform: translateX(3px);
 }
+
+
+
+
+.derechos {
+    max-width: 1200px;
+    margin: 35px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    font-size: 14px;
+    text-align: center;
+}
+
+.pie-contenido {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer {
+    background-color: #10253e;
+    color: #dce8f7;
+    padding: 45px 20px 25px;
+}
+
+footer h2 {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer li {
+    margin-bottom: 8px;
+    overflow-wrap: anywhere;
+}
+
+footer a {
+    color: #dce8f7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: white;
+    text-decoration: underline;
+}
