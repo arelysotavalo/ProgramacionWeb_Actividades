@@ -375,3 +375,45 @@ footer a:hover {
     color: white;
     text-decoration: underline;
 }
+
+.galeria-proyectos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.proyecto {
+    background-color: #fafbfd;
+    border: 1px solid #dce8f7;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proyecto:hover {
+    transform: translateY(-5px);
+    background-color: #edf5ff;
+    box-shadow: 0 6px 15px rgba(18, 53, 104, 0.1);
+}
+
+.proyecto img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.proyecto-info {
+    padding: 16px;
+}
+
+.proyecto-info h3 {
+    font-size: 17px;
+    color: #123568;
+    margin-bottom: 6px;
+}
+
+.proyecto-info p {
+    font-size: 15px;
+    text-align: left;
+}
