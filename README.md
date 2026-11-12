@@ -93,8 +93,8 @@ Cada funcionalidad se desarrolla de manera independiente y posteriormente se rev
 
 ## Autores
 
-**Jonathan Alexander Bravo Vallejos**
-**Emanuel Alejandro Jácome Pineda**
+**Jonathan Alexander Bravo Vallejos**-
+**Emanuel Alejandro Jácome Pineda**-
 **Arelys Maholy Otavalo Villarreal**
 
 ---
