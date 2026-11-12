@@ -532,6 +532,47 @@ footer a:hover {
     }
 }
 
+/* Responsivo: tablets */
+@media (max-width: 900px) {
+    .contenedor {
+        flex-direction: column;
+        margin: 30px auto;
+    }
+
+    main,
+    .barra-lateral {
+        flex: none;
+        width: 100%;
+        min-width: 0;
+    }
+
+.barra-lateral {
+    position: static;
+}
+
+aside {
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+aside h2 {
+    font-size: 16px;
+    color: #516485;
+    margin-bottom: 12px;
+}
+
+aside a {
+    display: inline-block;
+    margin: 0 4px 8px;
+    padding: 8px 16px;
+    background-color: white;
+    border-radius: 20px;
+}
+}
+
 /* Responsivo: celulares */
 @media (max-width: 600px) {
     html {
