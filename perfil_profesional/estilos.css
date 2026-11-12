@@ -516,3 +516,127 @@ footer a:hover {
     background-color: #1265bd;
     color: white;
 }
+
+/* Responsivo: tablets */
+@media (max-width: 900px) {
+    .contenedor {
+        flex-direction: column;
+        margin: 30px auto;
+    }
+
+    main,
+    .barra-lateral {
+        flex: none;
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+/* Responsivo: tablets */
+@media (max-width: 900px) {
+    .contenedor {
+        flex-direction: column;
+        margin: 30px auto;
+    }
+
+    main,
+    .barra-lateral {
+        flex: none;
+        width: 100%;
+        min-width: 0;
+    }
+
+.barra-lateral {
+    position: static;
+}
+
+aside {
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+aside h2 {
+    font-size: 16px;
+    color: #516485;
+    margin-bottom: 12px;
+}
+
+aside a {
+    display: inline-block;
+    margin: 0 4px 8px;
+    padding: 8px 16px;
+    background-color: white;
+    border-radius: 20px;
+}
+}
+
+/* Responsivo: celulares */
+@media (max-width: 600px) {
+    html {
+        scroll-padding-top: 20px;
+    }
+
+    header {
+        padding: 35px 15px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    header p {
+        font-size: 17px;
+    }
+
+    header img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .menu {
+        position: static;
+        gap: 4px;
+        padding: 10px;
+    }
+
+    .menu a {
+        font-size: 14px;
+        padding: 7px 12px;
+    }
+
+    .contenedor {
+        padding: 0 15px;
+    }
+
+    section {
+        padding: 22px 18px;
+    }
+
+    section h2 {
+        font-size: 22px;
+    }
+
+    section p {
+        text-align: left;
+    }
+
+    .destacados-grid {
+        flex-direction: column;
+    }
+
+    .timeline-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    footer {
+        text-align: center;
+    }
+}
